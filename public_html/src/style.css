@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    background-color: #0b192c;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #0b192c;
+    padding: 40px 20px;
+}
+
+.card-wrapper {
+    width: 100%;
+    max-width: 350px;
+    padding: 24px;
+    background-color: #12263f;
+    border-radius: 16px;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.card__images {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card__images > img {
+    width: 100%;
+}
+.card__images-layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 255, 0.45);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.card__images-layer img {
+    width: 48px;
+    height: 48px;
+}
+.card__images:hover .card__images-layer {
+    opacity: 1;
+}
+.card__title h1 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+.card__title h1:hover {
+    color: #00ffff;
+}
+.card__title p {
+    margin: 0;
+    color: #7fa4cc;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.card__time-left,
+.card__time-right {
+    font-size: 15px;
+}
+.card__time-left img,
+.card__time-right img {
+    width: 18px;
+
+    height: 18px;
+}
+.card__time-left span {
+    color: #00ffff;
+
+    font-weight: 600;
+}
+.card__time-right span {
+    color: #7fa4cc;
+}
+.card__creator {
+    border-top: 1px solid #29415b;
+}
+.card__creator > img {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+}
+.card__creator p {
+    color: #7fa4cc;
+
+    font-size: 15px;
+}
+.card__creator a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.card__creator a:hover {
+    color: #00ffff;
+}
+.attribution {
+    padding: 20px;
+    background-color: #0b192c;
+    color: #7fa4cc;
+    font-size: 14px;
+}
+.attribution a {
+    color: #00ffff;
+    text-decoration: underline;
+}
+.attribution a:hover {
+    color: #ffffff;
+}
+@media (max-width: 400px) {
+    .card-wrapper {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .card__title h1 {
+        font-size: 21px;
+    }
+    .card__title p {
+        font-size: 15px;
+    }
+}
